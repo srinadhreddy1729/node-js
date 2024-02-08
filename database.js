@@ -13,7 +13,7 @@ var data=sql.createConnection({
   user:'root',
   password:'srinadh$17@29'
 })
-data.query("select * from Student",(err,cols,info)=>
+data.query("select * from Student limit 1",(err,cols,info)=>
 {
   var ff=JSON.stringify(cols)
   fs.writeFile('serverInfo.txt',ff,(err)=>
